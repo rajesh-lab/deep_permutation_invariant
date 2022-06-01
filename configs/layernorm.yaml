@@ -1,0 +1,24 @@
+method: grid
+metric:
+  goal: minimize
+  name: test_loss
+parameters:
+  norm:
+    values:
+    - none
+    - layer_norm
+  task:
+    values:
+    - normal
+    - categorical
+  model:
+   values:
+    - settransformer
+    - deepsets
+    - 1000
+ seed:
+   values:
+    - 0
+program: experiments/layer_norm_analysis.py
+project: layernorm_analysis
+

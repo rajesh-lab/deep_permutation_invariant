@@ -1,0 +1,30 @@
+method: grid
+metric:
+  goal: minimize
+  name: test_loss
+parameters:
+  norm:
+    values:
+    - layer_norm
+    - feature_norm
+    - set_norm
+  task:
+    values:
+    #- ood
+    - indistr
+  batch_size:
+    values:
+     #- 2
+     - 4
+     - 8
+     - 16
+     - 32
+     - 64
+  seed:
+    values:
+     - 0
+     - 1
+     - 2 
+program: experiments/feature_norm_analysis.py
+project: featurenorm_analysis
+

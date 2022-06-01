@@ -1,0 +1,29 @@
+method: grid
+metric:
+  goal: minimize
+  name: test_loss
+parameters:
+  norm:
+    values:
+    - none
+    #- layer_norm
+    #- feature_norm
+    #- set_norm
+  model:
+    values:
+    #- deepsets
+    #- deepsets2
+    #- settransformer
+    #- settransformer2
+    - deepsets-small
+    #- deepsets2-small
+    - settransformer-small
+    #- settransformer2-small
+  seed:
+    values:
+     - 0
+     - 1
+     - 2
+program: experiments/set_anomaly.py
+project: setanomaly
+

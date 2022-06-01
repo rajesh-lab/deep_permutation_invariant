@@ -1,0 +1,35 @@
+method: grid
+metric:
+  goal: minimize
+  name: test_loss
+parameters:
+  norm:
+    values:
+    #- feature_norm
+    - set_norm
+    - layer_norm
+  task:
+    values:
+    - hematocrit_categorical
+    - hematocrit_small
+    #- pointcloud
+    #- mnistvar
+    #- normalvar
+  model:
+    values:
+    - deepsets2
+  residual_pipeline:
+    values:
+    - he
+    #- resnet
+  seed:
+    values:
+    - 0
+    - 1
+    - 2
+  size:
+    values:
+    - 25
+program: experiments/deep_sets_analysis.py
+project: results
+
