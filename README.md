@@ -32,7 +32,7 @@ The regression task consists in predicting, from a distribution, the hematocrit 
 Flow-RBC can be downloaded at the [this link](https://cims.nyu.edu/~lhz209/flowrbc).
 
 All other set datasets (with the exception of Anemia which is not publicly available), can be derived by the following open-source datasets:
-1. Point Cloud: [ModelNet40](https://modelnet.cs.princeton.edu/).
+1. Point Cloud: [ModelNet40](https://modelnet.cs.princeton.edu/). We use the HDF5 files downloaded from the [Pointnet repository](https://github.com/charlesq34/pointnet) from [this link](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip). (As of Oct 2022, the issued certificate has expired, so downloading will require an additional `--no-check-certificate` flag.)
 2. MNIST Variance: [MNIST](https://github.com/myleott/mnist_png/raw/master/mnist_png.tar.gz).
 3. CelebA Set Anomaly: [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
 

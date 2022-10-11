@@ -4,6 +4,8 @@ import glob
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 import h5py
+import torch
+torch.multiprocessing.set_sharing_strategy('file_system')
 
 
 class MNISTSetDataset(Dataset):
@@ -57,6 +59,7 @@ class MNISTSetDataset(Dataset):
         elif self.experiment == "mnist-count":
             output = len(np.unique(labels))
             assert output <= 10, f"count not in range: {output}"
+        imgs = imgs.reshape(self.max_set_size, -1)
         return imgs.astype('int32'), np.array([output]), np.array([num_images]).astype('int32')
 
 
